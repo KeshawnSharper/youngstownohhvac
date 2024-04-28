@@ -1,0 +1,612 @@
+    *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* *{
+    box-sizing: border-box;
+} */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+    font-family: roboto, sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+#navbar{
+    width:100%;
+    background-color: #000;
+    color: #000;
+    position: fixed;
+    z-index: 5;
+    display: block;
+    padding: 2rem;
+    border-bottom: #74C365 2px solid;
+}
+.navbar-mobile{
+    display: inline-flex;
+    width: 100%;
+}
+
+#navbar i {
+cursor: pointer;
+}
+.close-icon{
+    display: none;
+}
+#navbar button{
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    background: linear-gradient(90deg, lightgray,white, darkgray, black);
+    color: black;
+    /* margin: 0px auto 0; */
+    right: 15rem;
+    padding: 12px 20px;
+    cursor: pointer;
+    background-size: 400%;
+    display: block;
+    width: 30rem;
+    max-height: 3rem;
+    animation: animate 6s linear infinite;
+    
+}
+#navbar button:hover{
+    background: #74C365;
+    color:black;
+}
+.mobile-icon{
+    width: 100%;
+    display: flex;
+}
+.mobile-list-showing{
+display: none;
+float: left;
+width: 100%;
+text-align: left;
+overflow-y: scroll;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+#navbar ul a li{
+    width: 100%;
+    padding: 1.3rem;
+    list-style: none;
+}
+#navbar ul a{
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+#navbar ul a li:hover{
+    background-color: #74C365;
+    color: #000;
+}
+.navbar-cpu{
+    display: none;
+}
+.cpu-list-showing{
+display: inline-flex;
+text-align: right;
+width: 100%;
+}
+.cpu-service-list-class{
+  display: none;
+}
+
+.cpu-price-list-class{
+  display: none;
+}
+.mobile-service-list-class{
+  display: none;
+}
+.mobile-price-list-class{
+  display: none;
+}
+
+
+@media only screen and (min-width: 992px) {
+  .home-header img{
+    display: none;
+  }
+  video{
+    z-index: 1;
+  }
+    .navbar-mobile{
+        display: none;
+    }
+    .navbar-cpu{
+        display: inline-flex;
+        text-align: center;
+    }
+    #navbar{
+        text-align: center;
+    }
+    .home-header-content {
+        padding: 250px;
+    }
+    #about-us-section{
+        padding: 50px;
+        /* text-align: center; */
+    }
+    .banner button{
+        text-align: center;
+        width: 500px;
+    }
+    #services{
+        padding: 50px;
+    }
+    #reviews-div{
+        padding: 150px;
+    }
+    #footer{
+        padding: 150px;
+        text-align: center;
+    }
+}
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.home-header {
+    height: 40rem;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-repeat: repeat;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%; 
+    z-index: -1;
+}
+.home-header img{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-repeat: repeat;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  object-fit: cover;
+  width: 100%;
+}
+.home-header-content {
+    position: relative;
+    padding-top: 250px;
+    color: #fff;}
+.home-header-content a{
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: Playfair Display, serif;
+    line-height: 1.1;
+    text-align: center;
+}
+h2 {
+  text-align: center;
+}
+
+.home-header p {
+    font-size: clamp(25px, 4vw, 40px);
+    margin-top: 10px;
+}
+
+.home-header-content button {
+    display: block;
+    font-size: clamp(14px, 1.5vw, 18px);
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+.home-header-content button:hover {
+    background: white;
+    color: black;
+
+}
+
+main{
+  color: #000;
+  padding: 100px;
+}
+.main-content, .sidebar {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.main-content {
+}
+
+.sidebar {
+
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  @media only screen and (min-width: 1024px){
+    grid-template-columns: 50% 50%;
+  }
+
+}
+.grid-parent-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  @media only screen and (min-width: 1024px){
+    grid-template-columns: 60% 40%;
+  }
+
+}
+.grid-parent-3-columns {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 30px;
+
+  @media only screen and (min-width: 1024px){
+    grid-template-columns: 25% 25% 25%;
+  }
+}
+#about-us-section{
+    width: 100%;
+}
+    
+    #about-us-section input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    #about-us-section input[type=email], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    #about-us-section input[type=number], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    #about-us-section label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+    #about-us-section input[type=submit] {
+      background-color: #74C365;
+      color: black;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+    
+    #about-us-section input[type=submit]:hover {
+      background-color: #74C365;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+    
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media only screen and (max-width: 1024px) {
+     
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+.main-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+aside{
+    position: relative;
+    text-align: center;
+
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+  
+
+.banner button{
+    background-color: #74C365;
+    border: 0;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    cursor:none;
+
+}
+.form button{
+    background-color: black;
+    border: 0;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    cursor:pointer;
+}
+.form button:hover{
+    background-color: #fff;
+    color: #000;
+}
+#parralax {
+  /* The image used */
+  background-image: url("parallax.jpg");
+
+   /* Full height */
+   min-height: 200px;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+}
+/* h2{
+    text-align: left;
+
+} */
+#services img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 175px;
+    width: 175px;
+}
+#services{
+    width: 100%;
+    background-color: #74C365;
+}
+#services a[href]{
+color: white;
+}
+#services a[href]:hover{
+color: gray;
+}
+#services footer{
+}
+
+
+#reviews-div{
+    
+    width:100%;
+}
+#reviews-div .links{
+    color: darkgreen;
+}
+.avatar {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: darkgreen;}
+#footer{
+   width: 100%;
+    background-color: #74C365;
+}
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: black;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: white;
+  color: #000;
+}
+
+@media only screen and (min-width: 1024px) {
+  main{
+    padding: 0px;
+  }
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+#footer aside{
+    text-align: center;
+}
+
+.image-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  color: white;
+  list-style-type: none;
+}
+.image-container a{
+  color: #000000;
+}
+
+.image-container img {vertical-align: middle;width: 100%;}
+
+.image-container .image-content {
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  padding: 20px;
+}
